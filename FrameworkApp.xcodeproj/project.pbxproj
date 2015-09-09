@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1931D1631BA092A800FED9E1 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1931D1621BA092A800FED9E1 /* libGoogleAnalyticsServices.a */; };
+		1931D1661BA092B000FED9E1 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1931D1651BA092B000FED9E1 /* libsqlite3.dylib */; };
+		1931D1681BA092B500FED9E1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1931D1671BA092B500FED9E1 /* CoreData.framework */; };
+		1931D16A1BA092B800FED9E1 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1931D1691BA092B800FED9E1 /* libz.dylib */; };
+		1931D16C1BA092BD00FED9E1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1931D16B1BA092BD00FED9E1 /* SystemConfiguration.framework */; };
 		19E421D51BA089710048D717 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E421D41BA089710048D717 /* main.m */; };
 		19E421D81BA089710048D717 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E421D71BA089710048D717 /* AppDelegate.m */; };
 		19E421DB1BA089710048D717 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E421DA1BA089710048D717 /* ViewController.m */; };
@@ -49,6 +54,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1931D1621BA092A800FED9E1 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalyticsServices.a; path = SDK/SDK/GoogleAnalyticsServicesiOS_3.13/libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
+		1931D1651BA092B000FED9E1 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		1931D1671BA092B500FED9E1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		1931D1691BA092B800FED9E1 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		1931D16B1BA092BD00FED9E1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		19E421CF1BA089710048D717 /* FrameworkApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrameworkApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19E421D31BA089710048D717 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19E421D41BA089710048D717 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -70,7 +80,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1931D16C1BA092BD00FED9E1 /* SystemConfiguration.framework in Frameworks */,
+				1931D16A1BA092B800FED9E1 /* libz.dylib in Frameworks */,
+				1931D1681BA092B500FED9E1 /* CoreData.framework in Frameworks */,
+				1931D1661BA092B000FED9E1 /* libsqlite3.dylib in Frameworks */,
 				19E4231A1BA08B220048D717 /* SDK.framework in Frameworks */,
+				1931D1631BA092A800FED9E1 /* libGoogleAnalyticsServices.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +102,11 @@
 		19E421C61BA089710048D717 = {
 			isa = PBXGroup;
 			children = (
+				1931D16B1BA092BD00FED9E1 /* SystemConfiguration.framework */,
+				1931D1691BA092B800FED9E1 /* libz.dylib */,
+				1931D1671BA092B500FED9E1 /* CoreData.framework */,
+				1931D1651BA092B000FED9E1 /* libsqlite3.dylib */,
+				1931D1621BA092A800FED9E1 /* libGoogleAnalyticsServices.a */,
 				19E4221E1BA089890048D717 /* SDK.xcodeproj */,
 				19E421D11BA089710048D717 /* FrameworkApp */,
 				19E421EB1BA089710048D717 /* FrameworkAppTests */,
@@ -414,6 +434,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FrameworkApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SDK/SDK/GoogleAnalyticsServicesiOS_3.13",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -424,6 +448,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FrameworkApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SDK/SDK/GoogleAnalyticsServicesiOS_3.13",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
