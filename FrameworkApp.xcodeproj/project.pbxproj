@@ -14,6 +14,7 @@
 		19E421E01BA089710048D717 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19E421DF1BA089710048D717 /* Images.xcassets */; };
 		19E421E31BA089710048D717 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19E421E11BA089710048D717 /* LaunchScreen.xib */; };
 		19E421EF1BA089710048D717 /* FrameworkAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E421EE1BA089710048D717 /* FrameworkAppTests.m */; };
+		19E4231A1BA08B220048D717 /* SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19E422241BA0898A0048D717 /* SDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,6 +24,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = 19E421CE1BA089710048D717;
 			remoteInfo = FrameworkApp;
+		};
+		19E422231BA0898A0048D717 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19E4221E1BA089890048D717 /* SDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 19E422021BA089890048D717;
+			remoteInfo = SDK;
+		};
+		19E422251BA0898A0048D717 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19E4221E1BA089890048D717 /* SDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 19E4220D1BA089890048D717;
+			remoteInfo = SDKTests;
+		};
+		19E4231B1BA08B7A0048D717 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19E4221E1BA089890048D717 /* SDK.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 19E422011BA089890048D717;
+			remoteInfo = SDK;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -40,6 +62,7 @@
 		19E421E81BA089710048D717 /* FrameworkAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrameworkAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19E421ED1BA089710048D717 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19E421EE1BA089710048D717 /* FrameworkAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FrameworkAppTests.m; sourceTree = "<group>"; };
+		19E4221E1BA089890048D717 /* SDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDK.xcodeproj; path = SDK/SDK.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19E4231A1BA08B220048D717 /* SDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +87,7 @@
 		19E421C61BA089710048D717 = {
 			isa = PBXGroup;
 			children = (
+				19E4221E1BA089890048D717 /* SDK.xcodeproj */,
 				19E421D11BA089710048D717 /* FrameworkApp */,
 				19E421EB1BA089710048D717 /* FrameworkAppTests */,
 				19E421D01BA089710048D717 /* Products */,
@@ -119,6 +144,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		19E4221F1BA089890048D717 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				19E422241BA0898A0048D717 /* SDK.framework */,
+				19E422261BA0898A0048D717 /* SDKTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -133,6 +167,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				19E4231C1BA08B7A0048D717 /* PBXTargetDependency */,
 			);
 			name = FrameworkApp;
 			productName = FrameworkApp;
@@ -186,6 +221,12 @@
 			mainGroup = 19E421C61BA089710048D717;
 			productRefGroup = 19E421D01BA089710048D717 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 19E4221F1BA089890048D717 /* Products */;
+					ProjectRef = 19E4221E1BA089890048D717 /* SDK.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				19E421CE1BA089710048D717 /* FrameworkApp */,
@@ -193,6 +234,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		19E422241BA0898A0048D717 /* SDK.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SDK.framework;
+			remoteRef = 19E422231BA0898A0048D717 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19E422261BA0898A0048D717 /* SDKTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SDKTests.xctest;
+			remoteRef = 19E422251BA0898A0048D717 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		19E421CD1BA089710048D717 /* Resources */ = {
@@ -240,6 +298,11 @@
 			isa = PBXTargetDependency;
 			target = 19E421CE1BA089710048D717 /* FrameworkApp */;
 			targetProxy = 19E421E91BA089710048D717 /* PBXContainerItemProxy */;
+		};
+		19E4231C1BA08B7A0048D717 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SDK;
+			targetProxy = 19E4231B1BA08B7A0048D717 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -418,6 +481,7 @@
 				19E421F41BA089710048D717 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		19E421F51BA089710048D717 /* Build configuration list for PBXNativeTarget "FrameworkAppTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +490,7 @@
 				19E421F71BA089710048D717 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
